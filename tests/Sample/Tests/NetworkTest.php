@@ -1,8 +1,8 @@
 <?php
 
-use ODesk\ServiceManager;
-use ODesk\MysqliDb;
-use ODesk\Network;
+use Sample\ServiceManager;
+use Sample\MysqliDb;
+use Sample\Network;
 
 class NetworkTest extends PHPUnit_Framework_TestCase
 {
@@ -14,7 +14,7 @@ class NetworkTest extends PHPUnit_Framework_TestCase
         $sm->host = 'localhost';
         $sm->username = 'root';
         $sm->password = '';
-        $sm->database = 'odesk';
+        $sm->database = 'Sample';
         
         $sm->db = $sm->shared( function( $sm ) {
             return new MysqliDb($sm->host, $sm->username, $sm->password, $sm->database);
@@ -22,7 +22,7 @@ class NetworkTest extends PHPUnit_Framework_TestCase
         
         $db = $sm->db;
     
-        // returns an array of all users from the odesk.user table
+        // returns an array of all users from the Sample.user table
         $connections = $db->get( 'connection' );
         
         $this->network = new Network( count( $connections ) );

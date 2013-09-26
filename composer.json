@@ -1,9 +1,9 @@
 {
 	"autoload": {
 		"classmap" : [
-			"src/ODesk",
-			"tests/ODesk",
-			"tests/ODesk/Tests"
+			"src/Sample",
+			"tests/Sample",
+			"tests/Sample/Tests"
 		]
 	},
     "require-dev": {

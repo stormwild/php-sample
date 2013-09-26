@@ -1,5 +1,5 @@
 <?php
-namespace ODesk;
+namespace Sample;
 
 class ServiceManager {
     

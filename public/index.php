@@ -2,9 +2,9 @@
 
 require_once '../vendor/autoload.php';
 
-use ODesk\ServiceManager;
-use ODesk\MysqliDb;
-use ODesk\Network;
+use Sample\ServiceManager;
+use Sample\MysqliDb;
+use Sample\Network;
 
 $sm = new ServiceManager();
 
@@ -12,7 +12,7 @@ $sm = new ServiceManager();
 $sm->host = 'localhost';
 $sm->username = 'root';
 $sm->password = '';
-$sm->database = 'odesk';
+$sm->database = 'sample';
 
 $sm->db = $sm->shared( function( $sm ) {
     return new MysqliDb($sm->host, $sm->username, $sm->password, $sm->database);        
@@ -20,7 +20,7 @@ $sm->db = $sm->shared( function( $sm ) {
 
 $db = $sm->db;
 
-// returns an array of all users from the odesk.user table
+// returns an array of all users from the Sample.user table
 $connections = $db->get( 'connection' );
 
 // injecting dependencies
@@ -37,13 +37,13 @@ var_dump( $network->query(7, 1) );
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Network Connections | oDesk</title>
+<title>Network Connections | Sample</title>
 </head>
 <body>
 
 	<div class="container">
     
-        <h1>oDesk</h1>
+        <h1>Sample</h1>
         
         <h2>Network Connections</h2>
         
