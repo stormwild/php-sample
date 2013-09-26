@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="vendor/autoload.php" colors="true">
 	<testsuites>
-		<testsuite name="oDesk Tests">
-			<directory>tests/ODesk/Tests</directory>
+		<testsuite name="Sample Tests">
+			<directory>tests/Sample/Tests</directory>
 		</testsuite>
 	</testsuites>
 </phpunit>
