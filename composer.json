@@ -1,0 +1,12 @@
+{
+	"autoload": {
+		"classmap" : [
+			"src/ODesk",
+			"tests/ODesk",
+			"tests/ODesk/Tests"
+		]
+	},
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    }
+}
