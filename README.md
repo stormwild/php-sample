@@ -13,8 +13,13 @@ The problem would be how to query the connections for each user.
 
 - PHP >= 5.6
 - MySQL
+- PHPUnit
 
 ## Setup
+
+```
+composer install
+```
 
 ### Cloud 9
 
