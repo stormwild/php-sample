@@ -8,11 +8,14 @@ use Sample\Network;
 
 $sm = new ServiceManager();
 
+// load the config
+$config = (object) require 'config.php';
+
 // populate the service manager  
-$sm->host = 'localhost';
-$sm->username = 'root';
+$sm->host = $config->host;
+$sm->username = $config->username;
 $sm->password = '';
-$sm->database = 'sample';
+$sm->database = $config->database;
 
 $sm->db = $sm->shared( function( $sm ) {
     return new MysqliDb($sm->host, $sm->username, $sm->password, $sm->database);        
@@ -21,8 +24,9 @@ $sm->db = $sm->shared( function( $sm ) {
 $db = $sm->db;
 
 // returns an array of all users from the Sample.user table
+$users = $db->get( 'user' );
 $connections = $db->get( 'connection' );
-
+var_dump($connections);
 // injecting dependencies
 $network = new Network( count( $connections ) );
 $network->setDb($db);

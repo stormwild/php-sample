@@ -4,10 +4,10 @@
  * @TODO refactor the service manager to accept an array of objects and factories  
  */
 return array(
-            'host' => 'localhost',
-            'username' => 'root',
+            'host' => getenv('IP'),
+            'username' => getenv('C9_USER'),
             'password' => '',
-            'database' => 'Sample',
+            'database' => 'sample',
             'db' => array(
                         'shared' => function ( $sm ) {
                             return new MysqliDb($sm->host, $sm->username, $sm->password, $sm->database);
