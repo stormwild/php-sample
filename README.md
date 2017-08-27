@@ -52,8 +52,16 @@ php -S $IP:$PORT -t public/
 
 Still a work-in-progress
 
+[php-sample on Cloud9](https://ide.c9.io/stormwild/php-sample)
+
+
 ## Security
 
 Todo: Move `public/config.php` out of public folder.
 
 Todo: Use .env file for config and add to .gitignore
+
+## References:
+
+- [MySQL - Create Database Statement with Unicode Support](https://gist.github.com/stormwild/ca7badceef5ebbbf6448)
+- [Setting Up MySQL](https://community.c9.io/t/setting-up-mysql/1718)
